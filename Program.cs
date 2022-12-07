@@ -12,9 +12,13 @@ namespace cs_.net4._7_playground
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i < 10; i++)
+            for (int i = 1; i<=9; i++)
             {
-                Console.WriteLine(i);
+                for (int j = 1; j <= 9; j++)
+                {
+                    Console.Write($"{i * j} ");
+                }
+                Console.WriteLine();
             }
         }
     }
