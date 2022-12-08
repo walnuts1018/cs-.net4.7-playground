@@ -12,6 +12,7 @@ namespace cs_.net4._7_playground
     {
         static void Main(string[] args)
         {
+            #region test
             for (int i = 1; i <= 9; i++)
             {
                 for (int j = 1; j <= 9; j++)
@@ -20,8 +21,10 @@ namespace cs_.net4._7_playground
                 }
                 Console.WriteLine();
             }
+            #endregion
+
             #if DEBUG
-                Console.WriteLine("DEBUG");
+            Console.WriteLine("DEBUG");
             #endif
         }
     }
