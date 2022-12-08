@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -12,20 +13,15 @@ namespace cs_.net4._7_playground
     {
         static void Main(string[] args)
         {
-            #region test
-            for (int i = 1; i <= 9; i++)
+            int sum = 0;
+            for (int i = 100; i<=200; i++)
             {
-                for (int j = 1; j <= 9; j++)
-                {
-                    Console.Write($"{i * j} ");
-                }
-                Console.WriteLine();
+                if (i%2==0)
+                { continue; }
+                sum += i;
+                
             }
-            #endregion
-
-            #if DEBUG
-            Console.WriteLine("DEBUG");
-            #endif
+            Console.WriteLine(sum);
         }
     }
 }
