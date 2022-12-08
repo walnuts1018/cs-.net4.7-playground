@@ -7,28 +7,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
+
 namespace cs_.net4._7_playground
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string language = "C#";
-            switch (language)
-            {
-                case "C#":
-                case "Visual Basic":
-                case "F#":
-                    Console.WriteLine(".NET対応");
-                    break;
-                case "Python":
-                case "Ruby":
-                    Console.WriteLine("スクリプト言語");
-                    break;
-                default: 
-                    Console.WriteLine("不明");
-                    break;
-            }
+            var str1 = "あいうえおaiueo";
+            Console.WriteLine(str1.Length);
+
+            var str2 = "😄";
+            StringInfo str2Info = new StringInfo(str2);
+            Console.WriteLine(str2Info.LengthInTextElements);
         }
     }
 }
