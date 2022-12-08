@@ -13,11 +13,21 @@ namespace cs_.net4._7_playground
     {
         static void Main(string[] args)
         {
-            var args2 = new string[] {"3", "10"};
-            foreach (var tmp in args2)
+            string language = "C#";
+            switch (language)
             {
-                int i =Int32.Parse(tmp);
-                Console.WriteLine(i * 1.5);
+                case "C#":
+                case "Visual Basic":
+                case "F#":
+                    Console.WriteLine(".NET対応");
+                    break;
+                case "Python":
+                case "Ruby":
+                    Console.WriteLine("スクリプト言語");
+                    break;
+                default: 
+                    Console.WriteLine("不明");
+                    break;
             }
         }
     }
