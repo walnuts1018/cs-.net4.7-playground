@@ -13,15 +13,12 @@ namespace cs_.net4._7_playground
     {
         static void Main(string[] args)
         {
-            int sum = 0;
-            for (int i = 100; i<=200; i++)
+            var args2 = new string[] {"3", "10"};
+            foreach (var tmp in args2)
             {
-                if (i%2==0)
-                { continue; }
-                sum += i;
-                
+                int i =Int32.Parse(tmp);
+                Console.WriteLine(i * 1.5);
             }
-            Console.WriteLine(sum);
         }
     }
 }
