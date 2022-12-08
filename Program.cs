@@ -14,8 +14,12 @@ namespace cs_.net4._7_playground
     {
         static void Main(string[] args)
         {
-            string str = null;
-            Console.WriteLine(String.IsNullOrEmpty(str));
+            string str = "鈴木\t太郎\t男\t50歳\t広島県";
+            var data = str.Split('\t');
+            foreach (var i in data)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
