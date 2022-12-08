@@ -4,6 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
 
@@ -14,11 +15,12 @@ namespace cs_.net4._7_playground
     {
         static void Main(string[] args)
         {
-            string str = "鈴木\t太郎\t男\t50歳\t広島県";
-            var data = str.Split('\t');
-            foreach (var i in data)
+            var str = "仕事用はwings@example.jpです。 プライベート 用 は YAMA@example.com です。";
+            var rgx = new Regex(@"[ a-z 0-9.!#$%&'*+/=?^_{|}~-]+@[ a-z 0-9-]+(?:\.[a-z 0-9-]+)*", RegexOptions.IgnoreCase);
+            var result = rgx.Matches(str);
+            foreach (Match m in result)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(m.Value);
             }
         }
     }
