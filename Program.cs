@@ -14,12 +14,8 @@ namespace cs_.net4._7_playground
     {
         static void Main(string[] args)
         {
-            var str1 = "あいうえおaiueo";
-            Console.WriteLine(str1.Length);
-
-            var str2 = "😄";
-            StringInfo str2Info = new StringInfo(str2);
-            Console.WriteLine(str2Info.LengthInTextElements);
+            string str = null;
+            Console.WriteLine(String.IsNullOrEmpty(str));
         }
     }
 }
